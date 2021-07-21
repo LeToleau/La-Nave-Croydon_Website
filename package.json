@@ -127,5 +127,13 @@
     "quick-lru": "^4.0.1",
     "readdirp": "^3.6.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeToleau/La-Nave-Croydon_Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LeToleau/La-Nave-Croydon_Website/issues"
+  },
+  "homepage": "https://github.com/LeToleau/La-Nave-Croydon_Website#readme",
   "description": ""
 }
