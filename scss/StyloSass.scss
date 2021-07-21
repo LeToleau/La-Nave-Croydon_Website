@@ -1,0 +1,313 @@
+
+$puenteSectionWave: rgb(17, 21, 44);
+$fondoTextos: rgba(128, 128, 128, 0.329);
+$fuenteResponsive: 1.2rem;
+$fotosGrid: '/Img/IMG_6444.jpg', '/Img/IMG_6447.jpg', '/Img/IMG_6456.jpg', '/Img/IMG_6476.jpg', '/Img/IMG_6500.jpg', '/Img/IMG_6523.jpg', '/Img/IMG_6524.jpg', '/Img/IMG_6549.jpg';
+
+$breakpoints: (
+    sm : 540px,
+    md : 768px,
+    lg : 1024px,
+);
+
+
+//HEADER
+
+
+body {
+    color: rgb(204, 200, 200);
+}
+
+.header {
+    background: linear-gradient(to top, rgba(34, 56, 73, 0.473), rgba(45, 45, 155, 0.562)), url(../Img/IMG_6549.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+
+    nav {
+        background-color: rgba(9, 13, 37, 0.664) !important;
+        height: 73px;
+        width: 100%;
+        ul {
+            font-size: 22px;
+            
+            li:hover {
+                background-color: rgba(47, 40, 88, 0.63);
+            }
+
+            li a{
+                color: white !important;
+            }
+        }
+    }
+
+    .containerLogo{
+        max-width: 500px;
+        margin: auto;
+        #logo {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    
+
+    .wave {
+        position: absolute;
+        width: 100%;
+        height: 12rem;
+        bottom: 0;
+        left: 0;
+        fill: $puenteSectionWave;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 760px) {
+        .header {
+            background: url(../Img/IMG_6524.jpg);
+        }
+    }
+
+}
+//HOME
+
+
+h2 {
+    text-align: center;
+}
+
+section {
+    background: linear-gradient(to top, rgb(33, 33, 75), $puenteSectionWave);
+
+    .container {
+        background: linear-gradient(to top, rgba(26, 17, 41, 0.671), rgba(25, 25, 87, 0.616)), url(/Img/smoke-09.jpg);
+        background-size:cover;
+        border-radius: 1rem;
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.26);
+    
+        .sectionTitle {
+            align-self: center;
+        }
+
+        video {
+            border: 2px solid white;
+            padding:0;
+        }
+
+        .row {
+            padding: 2rem 5rem;
+        }
+    
+        .textoEpigrafe {
+            background-color: $fondoTextos;
+            border-radius: 2em;
+            padding: 2% 5%;
+            font-size: $fuenteResponsive;
+        }
+    
+        .cardPlaylist {
+            background-color: rgba(240, 255, 240, 0.055);
+            display: flex;
+            margin: auto;
+            justify-content: space-evenly;
+            border-radius: .8rem;
+            #playlist {
+                width: 40%;
+                height: 83vh;
+                padding: 0;
+                margin: 2.6rem;
+                border: 2px solid white;
+            }
+            .citas {
+                background-color: rgba(86, 86, 112, 0.192);
+                display: flex;
+                flex-direction: column;
+                width: 40% !important;
+                max-height: 83vh;
+                padding: 2.6rem;
+                margin: 2.6rem;
+                justify-content: space-evenly;
+                overflow: hidden;
+                border-radius: .8rem;
+                .cita {
+                    height: 50%;
+                    padding: 0.5rem;
+                    background-color: $fondoTextos;
+                    border-radius: .8rem;
+                    font-size: $fuenteResponsive;
+                }
+            }
+        }  
+    }
+}
+
+.formulario {
+    height: 40vh;
+    background: url(../Img/IMG_6524.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: left;
+    text-align: end;
+
+    .contacto {
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+
+        h2 {
+            text-align: left;
+            font-size: 50px;
+        }
+    
+        .formExacto {
+            display: flex;
+            justify-content: flex-end;
+            .campos,
+            button {
+                margin: 1.5vh 2vw;
+            }
+            
+        }
+    
+        p {
+            margin:0;  
+            ; 
+        }
+    }
+} 
+
+
+//HISTORIA
+
+.historia {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5rem;
+
+    .content {
+        display: flex;
+        p {
+            display: inline-block;
+            margin: 0;
+            padding:0 2rem;
+        }
+
+        &__images {
+            flex-direction: column;
+            align-items:flex-end !important;
+            width: 60vw;
+        }
+    
+        &__img {
+            width: 100%;
+            margin: 2px;
+            border: 1px solid wheat;
+        }  
+    }
+    
+}
+
+
+//MUSICA
+.musica {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__item {
+        margin: 1rem 3rem;
+        background-color: rgba(64, 64, 145, 0.178);
+        border-radius: 2rem;
+    }
+
+    &__item:hover {
+        box-shadow: 1px 1px 2px 2px rgba(243, 243, 243, 0.548);
+    }
+
+    &__name {
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+    .fin {
+        margin-bottom: 0;
+    }
+}
+
+//PH-VID
+
+.carousel {
+    width:72%;
+    margin: auto;
+    border: 2px solid wheat;
+}
+
+.fotosGrid {
+    margin: auto;
+    padding: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    &__img {
+        display: flex;
+        width: 18vw;
+        height: 25vh;
+        margin: 2vh 1vw;
+        border: 1px solid wheat;
+    }
+
+    &__img--scale:hover {
+        @extend .fotosGrid__img;
+        transform: scale(2.5,2.5);
+    }
+}
+
+//CONTACTO
+
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+
+    &__item {
+        margin: 10px;
+    align-self: center;
+    }
+}
+
+//FOOTER
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: rgb(97, 97, 150);
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 2px 30px;
+        margin-top: 1%;
+
+        li {
+            color: white;
+            img {
+                height:50px;
+                width:50px;
+            }
+            a {
+                color:white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    p {
+        align-self: center;
+    }
+}
